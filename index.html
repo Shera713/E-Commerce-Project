@@ -12,7 +12,7 @@
     <script src="index.js" ></script>
   </head>
   <body>
-    +
+    
     <section class="landing">
       <nav>
         <div class="nav__container">
@@ -105,28 +105,19 @@
       <section id="features">
         <div class="container">
           <div class="row">
-          <h2 class="section__title">
-  Featured <span class="purple">Books</span>
-</h2>
+            <div class="books__header">
+              <h2 class="section__title books__header--title">
+                Featured <span class="purple">Books</span>
+              </h2>
+              <select id="filter">
+                <option value="" disabled selected>Sort</option>
+                <option value="LOW_TO_HIGH">Price, Low to High</option>
+                <option value="HIGH_TO_LOW">Price, High to Low</option>
+                <option value="RATING">By Rating</option>
+              </select>
+            </div>
 <div class="books">
-  <div class="book">
-<figure class="book__img--wrapper">
-  <img class="book__img" src="./assets/deep work.jpeg" alt="">
-</figure>
-<div class="book__title"> Deep Work
-
-</div>
-<div class="book__ratings">
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star-half-alt"></i>
-</div>
-<di class="book__price">
-  <span class="book__price--normal">$25.95</span> $14.95
-</di>
-  </div>
+ 
   <div class="book">
 <figure class="book__img--wrapper">
   <img class="book__img" src="./assets/crack the coding interview.png" alt="">

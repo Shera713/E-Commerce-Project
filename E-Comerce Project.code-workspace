@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "E-Comerce Project",
+			"path": "."
+		},
+		{
+			"name": "assets",
+			"path": "../../FES Library - CSS-20250708T124946Z-1-001/FES Library - CSS/assets"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "E-Comerce Project"
+	}
+}
