@@ -8,10 +8,10 @@ function closeMenu() {
 document.body.classList.remove ('menu--open')
 }
 
-function renderBooks(filter){
-    const booksWrapper= document.querySelector('.books');
+async function renderBooks(filter){
+    const booksWrapper = document.querySelector('.books');
 
-    const books = getBooks();
+    const books = await getBooks();
 
     if(filter ==='LOW_TO_HIGH'){
         books.sort((a, b) => ( a.salePrice || a.originalPrice) - (b.salePrice || b.originalPrice));
@@ -38,7 +38,7 @@ ${book.title}
   ${ratingsHTML(book.rating)}
 </div>
 <di class="book__price">
-  ${ratingsHTML(book.originalPrice, book.salePrice)}
+  ${priceHTML(book.originalPrice, book.salePrice)}
 </di>
   <span>$${book.originalPrice.toFixed(2)}</span>
 </di>
@@ -92,7 +92,9 @@ setTimeout(() => {
 //FAKE DATA
 
 function getBooks(){
-    return[
+   return new Promise((resolve) => {
+setTimeout(() => {
+resolve([
         {
             id: 1,
             title: "Crack The Coding Interview",
@@ -181,8 +183,19 @@ function getBooks(){
             salePrice: null,
             rating: 3.5,
         },
+        {
+            id: 12,
+            title: "Can't Hurt Me",
+            url: "assets/david goggins.jpeg",
+            originalPrice: 30,
+            salePrice: null,
+            rating: 3.5,
+        },
 
-    ]
+    ])
+}, 1000);
+    })
+    
 
 
 }
